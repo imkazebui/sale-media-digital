@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>TP2V Shop - Website bán hàng digatal media</title>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./CSS/detail-product.css">
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome.min.css">
+  <script src="./jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+  
+</head>
+
+<body>
+
+  <div class="header row">
+    <div class="header-content">
+      <div class="pull-left" style="width: 800px; padding-bottom: 10px;">
+        <ul>
+          <li>
+            <a href="">
+              <img class="logo" src="./images/logonhom/tp2v.png">
+            </a>        
+          </li>
+          <li style="font-size: 24px; color: green;">TP2V Shop</li>
+          <li class="col-md-4">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+              </span>
+            </div><!-- /input-group -->        
+          </li>
+          <li style="padding-top: 8px;" ><a>Bán hàng</a></li>
+          <li style="padding-top: 8px;" ><a>Trợ giúp</a></li>
+        </ul> 
+      </div>
+      <div class="pull-right" style="padding-top: 8px;">
+        <ul class="ul_user">
+          <li>
+            <img src="./images/avatar.jpg" style="height: 40px; margin-top: -10px;">
+          </li>
+          <li>Chào, Phương</li>
+        </ul>
+      </div>      
+    </div>
+  </div>
+  <div class="content row">
+    <div class="wrap-content row" id="row-p">
+      <div class="row" id="content-music">
+        <!-- Infor Album -->
+        <div class="row infor-album" id="row-p">
+          <img src="./images/avatar-album.jpg">
+          <p>
+            <b class="album-title">Tâm sự với người lạ</b>
+            <a style="font-size: 20px;" href=""> - Tiên Cookie</a>
+          </p>
+          <p>
+            <span style="color: #888;">Phát hành:</span> 2015 
+            <span style="color: #888; padding-left: 10px;">Thể loại:</span>
+            <a>Việt Nam</a>, <a>Nhạc trẻ</a>
+          </p> 
+          <p>
+            <a class="btn btn-default btn-like" id="plugin" style="background-color: purple;"><span class="fa fa-heart"></span> Thích</a>
+            <span class="btn-plugin">
+              <i></i>
+              <b></b>
+              <s class="sl-like">306</s>
+            </span>
+            <a data-toggle="modal" data-target="#modal_gg" class="btn btn-default btn-like-gg" id="plugin" style="color: red;"><span class="fa fa-google-plus"></span> Thích</a>
+            <span class="btn-plugin">
+              <i></i>
+              <b></b>
+              <s class="sl-like-gg">706</s>
+            </span>
+            <a data-toggle="modal" data-target="#modal_fb" href="#" class="btn btn-default btn-like-fb" id="plugin" style="background-color: #4d6abb;"><span class="fa fa-facebook-square"></span> Thích</a>
+            <span class="btn-plugin">
+              <i></i>
+              <b></b>
+              <s class="sl-like-fb">506</s>
+            </span>
+          </p>
+        </div>
+        <!-- Music Player -->
+        <div class="music-player row" id="row-p">
+          <div class="music-cover">
+            <br>
+            <p class="title-song">Tâm sự với người lạ</p>  
+            <p class="title-singer">Tiên Cookie</p>
+          </div>
+          <audio id="audio" preload="auto" tabindex="0" controls="" type="audio/mpeg">
+            <source type="audio/mp3" src="./music/tam su voi nguoi la.mp3">
+              Sorry, your browser does not support HTML5 audio.
+          </audio>
+          <ul id="playlist">
+            <li class="active row">
+              <div class="col-md-1">01</div>
+              <div class="col-md-5">
+                <a href="./music/tam su voi nguoi la.mp3">Tâm sự với người lạ</a>
+              </div>
+              <div class="col-md-4">Tiên Cookie</div>
+              <div class="col-md-2"><i class="fa fa-caret-right"></i> 5654</div>
+            </li>
+            <li class="row">
+              <div class="col-md-1">02</div>
+              <div class="col-md-5">
+                <a href="./music/piano.mp3">Tâm sự với người lạ (Piano Hòa tấu)</a>
+              </div>
+              <div class="col-md-4">Tiên Cookie</div>
+              <div class="col-md-2"><i class="fa fa-caret-right"></i> 3454</div>
+            </li>
+            <li class="active row">
+              <div class="col-md-1">03</div>
+              <div class="col-md-5">
+                <a href="./music/beat.mp3">Tâm sự với người lạ (Beat)</a>
+              </div>
+              <div class="col-md-4">Tiên Cookie</div>
+              <div class="col-md-2"><i class="fa fa-caret-right"></i> 1654</div>
+            </li>
+          </ul>
+        </div>
+        <!-- Lyric -->
+        <div class="row" id="lyric">
+          <p style="font-size: 18px;">Lời bài hát <b>Tâm sự với người lạ</b></p>
+          <p>Tâm sự với người lạ</p>
+          <p>Sáng tác: Tiên Cookie</p>
+          <br>
+          <!-- Lyric rút gọn -->
+          <div id="lyric-rutgon" class="show">
+            <p>
+              Verse: <br>
+              Ngày buồn rười rượi là ngày mà em xa tôi <br>
+              Đợi hoài chờ hoài mà rồi người đâu không tới, sao em không một lời <br>
+              Dặn trước với tôi người ơi? <br>
+              Chiều về ngậm ngùi nhìn từng hạt mưa bay bay            <br>
+            </p>
+            <a style="color: blue;" id="lyric-btn-xemthem">Xem thêm</a>  
+            <a href="" class="pull-right" style="margin-right: 20px; color: red;">Báo lỗi </a>
+          </div>
+          
+          <!-- Lyric đầy đủ -->
+          <div id="lyric-daydu" class="hide">
+            <p >
+              Verse: <br>
+              Ngày buồn rười rượi là ngày mà em xa tôi <br>
+              Đợi hoài chờ hoài mà rồi người đâu không tới, sao em không một lời <br>
+              Dặn trước với tôi người ơi?<br>
+
+              Chiều về ngậm ngùi nhìn từng hạt mưa bay bay<br>
+              Đường về thì dài mà lòng thì như chia hai, không ai khâu lành lại.<br>
+              Đành cứ thế đi miệt mài<br><br>
+
+              Chorus:<br>
+              Because I’m too lonely lonely, girl<br>
+              Xung quanh đông vui nhưng anh vẫn thấy sao mình thật cô đơn<br>
+              Bao nhiêu suy tư hoang mang cứ dồn vào lòng<br>
+              Chỉ riêng anh thôi <br>
+              Nên đôi khi anh muốn tâm sự cùng người lạ<br>
+              Một người không biết gì về đôi ta<br>
+              Không kêu lên “Ôi sao anh ngốc quá sao còn yêu cô ta”<br>
+              Không khuyên anh nên quên hay gắn hàn điều gì<br>
+              Vì anh đôi khi<br>
+              Chỉ cần một người ở bên lắng nghe anh nói<br><br>
+
+              Chorus2: <br><br>
+
+              Because I’m too lonely lonely, girl<br>
+              Ba năm trôi qua nhanh như chớp mắt em giờ nào có nhớ<br>
+              Bao nhiêu suy tư thương đau cứ dồn vào lòng<br>
+              Chỉ riêng anh thôi <br>
+              Nên đôi khi anh muốn tâm sự cùng người lạ<br>
+              Kể chuyện hai đứa lần đầu gặp xôn xao<br>
+              Quen nhau yêu thương nhau từ lúc nào, sâu đậm ra sao<br>
+              Sâu trong nơi anh kí ức vẫn còn dạt dào<br>
+              Và anh đôi khi<br>
+              Chỉ cần một người ở bên, bên anh<br>
+            </p>
+            <a style="color: blue;" id="lyric-btn-rutgon">Rút gọn</a>  
+            <a href="" class="pull-right" style="margin-right: 20px; color: red;">Báo lỗi </a>
+          </div>
+          
+        </div>
+        <!-- Other Album -->
+        <div class="other-album row" id="row-p">
+          <p class="title">Album Tiên Cookie</p>
+          <ul>
+            <li>
+              <img src="./images/avatar-album.jpg">
+              <p>Tâm sự với người lạ</p>
+            </li>
+            <li>
+              <img src="./images/album2.jpg">
+              <p>Sau tất cả</p>
+            </li>
+          </ul>
+        </div>
+        <!-- Other Video -->
+        <div class="other-video row" id="row-p">
+          <p class="title">Video Tiên Cookie</p>
+          <ul>
+            <li>
+              <img src="./images/v1.jpg">
+              <p>Hit Mashup</p>
+            </li>
+            <li>
+              <img src="./images/v2.jpg">
+              <p>Sau tất cả</p>
+            </li>
+            <li>
+              <img src="./images/v3.jpg">
+              <p>Thời gian sẽ trả lời</p>
+            </li>
+            <li>
+              <img src="./images/v4.jpg">
+              <p>Anh không giữ</p>
+            </li>
+          </ul>
+        </div>
+        <!-- Form Comment -->
+        <p class="row title" id="row-p">Bình luận (<span id="count_comment">2</span>)</p>
+        <div class="form-comment row" id="row-p">
+          <div class="form-group">
+            <img src="./images/avatar.jpg">
+            <textarea style="height: 80px; margin-bottom: 20px;"class="col-md-10" id="txtComment" name="textarea" placeholder="Bạn đang nghĩ gì?"></textarea>
+          </div>
+          <a onClick="addComment()" class="btn btn-primary pull-right">Bình luận</a>
+        </div>
+        <!-- Other comments -->
+        <p class="add_comments">
+        </p>
+
+        <div class="other-comments row" id="row-p">
+          <img style="width:50px; height: 50px; float: left; margin-right: 20px;" src="./images/avatar-user.jpg">
+          <div class="pull-left">
+            <p><b>Huỳnh Thế Vinh</b></p>
+            <p>Nghe dở ẹc</p>            
+          </div>
+          <div class="pull-right">1 tiếng trước</div>
+        </div>
+
+        <div class="other-comments row" id="row-p">
+          <img style="width:50px; height: 50px; float: left; margin-right: 20px;" src="./images/avatar-user.jpg">
+          <div class="pull-left">
+            <p><b>Nguyễn Văn Thái</b></p>
+            <p>Nghe mắc ói</p>            
+          </div>
+          <div class="pull-right">3 tiếng trước</div>
+        </div>
+      </div>
+      <!-- Content right -->
+      <div class="row" id="content-right">
+        <!-- Buy -->
+        <div class="col-md-12" id="buy-song">
+          <div class="checkbox">
+            <label for="checkboxes-0">
+              <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+              <b>Ca khúc 1 - 1.000 VNĐ</b>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label for="checkboxes-1">
+              <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+              <b>
+                Ca khúc 2 - 1.000 VNĐ
+              </b>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label for="checkboxes-2">
+              <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+              <b>Ca khúc 3 - 1.000 VNĐ</b>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label for="checkboxes-4">
+              <input type="checkbox" name="checkboxes" id="checkboxes-4" value="5">
+              <b>
+                Album - 3.000 VNĐ
+              </b>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button data-toggle="modal" data-target="#modal_buynow" id="buy-now" name="singlebutton" class="btn btn-primary form-control">Mua ngay</button>
+        </div>
+        <!-- Modal BuyNow -->
+        <div id="modal_buynow" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Xác nhận mua</h4>
+              </div>
+              <div class="modal-body show" id="modal_mua" style="height: 190px; margin-left: 140px;">
+                <p>Bạn mua: Album Tâm sự với người lạ</p>
+                <p>Giá: 3.000đ</p>
+                <p>Tài khoản hiện tại: <span style="color: red; font-size: 16px;"><b>10.000 VNĐ</b></span></p>
+                <p>Vui lòng xác nhận lại mật khẩu để mua hàng:</p>
+                <div class="form-group">
+                  <div class="col-md-6" style="padding-left: 0;"> 
+                    <input id="matkhau" name="passwordinput" type="password" placeholder="Mật khẩu" class="form-control input-md">
+                    <span id="err" style="color: red;"></span>
+                  </div>
+                  <div class="col-md-4">
+                    <button id="xacnhan" name="singlebutton" class="btn btn-primary">Xác nhận</button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body hide" id="link_down"style="height: 170px; margin-left: 40px; padding-top: 60px;">
+                Số dư còn lại: <span style="color: red; font-size: 16px;"><b>7.000 VNĐ</b></span><br>
+                Link down Load: 
+                <a href="">http://mp3.zing.vn/album/Tam-Su-Voi-Nguoi-La-Single-Tien-Cookie/ZWZCWWDF.html</a>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- Hear -->
+        <div class="col-md-12" id="hear">
+          <p class="pull-left"><i class="fa fa-headphones"></i> Nghe</p>
+          <p class="pull-right">58574</p>
+        </div>
+        <!-- Your rate -->
+        <div class="col-md-12" id="rate" style="font-size: 16px;">
+          <p class="pull-left" id="danhgia">Đánh giá:</p>
+          <p class="pull-right">
+            <!-- <i id="goiy-star" class="show"></i> -->
+            <i id="mucdo" class=""></i>
+            <i class="fa fa-star st1"></i>
+            <i class="fa fa-star st2"></i>
+            <i class="fa fa-star st3"></i>
+            <i class="fa fa-star st4"></i>
+            <i class="fa fa-star st5"></i>
+          </p>
+        </div>
+        <!-- Total rate -->
+        <div class="col-md-12" id="total-rate" style="font-size: 16px;">
+          <div class="pull-right">
+            <p style="font-size: 50px; text-align:center; margin-bottom: 0">4</p>
+            <p style="font-size: 18px;">
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" ></i> 
+            </p>
+            <p style="font-size: 12px;">Tổng số 
+              <i class="fa fa-user" style="margin-left: 10px;"></i>
+              <span >4.654</span>
+            </p>
+          </div>
+          <div class="pull-left" style="font-size: 12px; margin-left: 0px;">
+            <p><i class="fa fa-star"></i> 5
+              <span class="five-star">3.545</span> 
+            </p>
+            <p><i class="fa fa-star"></i> 4
+              <span class="four-star">545</span> 
+            </p>
+            <p><i class="fa fa-star"></i> 3
+              <span class="three-star">45</span> 
+            </p>
+            <p><i class="fa fa-star"></i> 2
+              <span class="two-star">15</span> 
+            </p>
+            <p><i class="fa fa-star"></i> 1
+              <span class="one-star">5</span>  
+            </p>
+          </div>
+        </div>
+        <!-- Bio singer -->
+        <div class="col-md-12" id="bio">
+          <img src="./images/bio-singer.jpg">
+          <p style="font-size: 16px; color: green; text-align: center;">Tiên Cookie</p>
+        </div>
+        <!-- Tiểu sủ rút gọn-->
+        <div class="col-md-12 show" id="div-rutgon">
+          <p>Tiên hiện đang là học sinh cuối cấp của THPT Trần Phú, Hoàn Kiếm, Hà Nội, bên cạnh khả năng sáng tác thì Tiên còn có một giọng hát khỏe khoắn đầy nội lực......</p>
+          <a class="pull-right" id="infor-xemthem">Xem thêm</a>
+        </div>
+        <!-- Tiểu sử đầy đủ -->
+        <div class="col-md-12 hide" id="div-daydu">
+          <p>Tiên hiện đang là học sinh cuối cấp của THPT Trần Phú, Hoàn Kiếm, Hà Nội, bên cạnh khả năng sáng tác thì Tiên còn có một giọng hát khỏe khoắn đầy nội lực...những sáng tác của cô được mọi người biết đến như: Vẫn, Có Khi Nào Rời Xa, Vượt Qua, Đi Từ Phía Mưa...cô còn được các ca sĩ tên tuổi khác như: Bảo Thy, Noo Phước Thịnh... đặt hàng ca khúc cho Album và Single của mình. với ước mơ trở thành một Music Producer, mong rằng cô sẽ mang đến cho chúng ta những sản phẩm tuyệt vời hơn nữa...</p>
+          <a class="pull-right" id="infor-rutgon">Rút gọn</a>
+        </div>
+        <div class="col-md-12" id="group-btn">
+          <a data-toggle="modal" data-target="#modal_mess" style="margin-right: 6px;" class="btn btn-default"><span class="fa fa-paper-plane"></span><b> Tin nhắn</b></a>
+          <a class="btn btn-default" id="follow"><span class="fa fa-user-plus"></span><b> Quan tâm</b></a>
+        </div>
+        <div class="col-md-12">
+          <p class="pull-left">File size</p>
+          <p class="pull-right">52.4MB</p>
+        </div>
+        <div class="col-md-12">
+          <p class="pull-left">File type</p>
+          <p class="pull-right">.mp3 file</p>
+        </div>
+        <div class="col-md-12">
+          <p class="pull-left">File quality</p>
+          <p class="pull-right">320Kbps</p>
+        </div>
+        <div style="height: 30px; background-color: #ecf0f1" class="col-md-12"></div>
+        <div class="col-md-12" style="padding-top: 20px;">
+          <div class="suggest-music row" id="row-p">
+            <p class="title">Có thể bạn muốn nghe</p>
+            <ul>
+              <li class="row" id="row-p">
+                <img src="./images/n1.jpg">
+                <div class="pull-left">
+                  <p>Top 100 Bài Hát Nhạc <br> Trẻ Hay Nhất</p>
+                  <p>Nghệ sĩ Various Artists</p>                
+                </div>
+              </li>
+              <li class="row" id="row-p">
+                <img src="./images/n2.jpg">
+                <div class="pull-left">
+                  <p>Cô bé ngày xưa</p>
+                  <p>Hoài Lâm</p>                
+                </div>
+              </li>
+              <li class="row" id="row-p">
+                <img src="./images/n3.jpg">
+                <div class="pull-left">
+                  <p>Về thăm quê ngoại</p>
+                  <p>Khắc Quốc Hải</p>                
+                </div>
+              </li>
+              <li style="border-bottom: none;" class="row" id="row-p">
+                <img src="./images/n4.jpg">
+                <div class="pull-left">
+                  <p>Vì tôi còn sống</p>
+                  <p>Tiên Tiên</p>                
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer row" id="row-p">
+    <br>
+    <p>@ 2015 TP2V, Inc. All rights reserved.</p>
+    <span>
+      <ul>
+        <li><a href="">Điều khoản</a></li>
+        <li><a href="">Quyền riêng tư</a></li>
+        <li><a href="">Thông báo</a></li>
+      </ul>  
+    </span>
+    
+  </div>
+
+  <!-- Modal GG -->
+  <div id="modal_gg" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Chia sẻ qua <span style="color: red;">Google plus</span></h4>
+        </div>
+        <div class="modal-body show" id="modal_mua" style="height: 390px; margin-left: 100px;">
+          <p>Bạn đã đề xuất công khai mục này là <a style="color: blue;">Bùi Thanh Phương</a></p>
+          <div class="form-group">
+            <textarea style="height: 80px; margin-bottom: 20px;"class="col-md-10" name="textarea" placeholder="Thêm nhận xét"></textarea>
+          </div>
+          <div class="cover_share">
+            <img src="./images/avatar-album.jpg">
+            <p style="color: purple; font-size: 16px; margin-left: 10px; margin-bottom: 0; margin-top: 5px;">Tâm sự với người lạ</p>
+            <a style="color: blue; font-size: 14px; margin-left: 10px;">TP2VShop.com</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Share</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal FB -->
+  <div id="modal_fb" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Chia sẻ qua <span style="color: blue;">FaceBoook</span></h4>
+        </div>
+        <div class="modal-body show" id="modal_mua" style="height: 390px; margin-left: 100px;">
+          <p><i class="fa fa-thumbs-o-up fa-2x" style="color: blue;"></i> Bạn đã Like Album <span style="color: purple; font-size: 16px;">Tâm sự với người lạ</span></p>
+          <div class="form-group">
+            <textarea style="height: 80px; margin-bottom: 20px;"class="col-md-10" name="textarea" placeholder="Thêm nhận xét"></textarea>
+          </div>
+          <div class="cover_share">
+            <img src="./images/avatar-album.jpg">
+            <p style="color: purple; font-size: 16px; margin-left: 10px; margin-bottom: 0; margin-top: 5px;">Tâm sự với người lạ</p>
+            <a style="color: blue; font-size: 14px; margin-left: 10px;">TP2VShop.com</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Share</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal Mes -->
+  <div id="modal_mess" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Gửi tin nhắn tới Tiên Cookie</h4>
+        </div>
+        <div class="modal-body show">
+          <textarea id="mess" style="border: none;"placeholder="Viết 1 tin nhắn..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Gửi</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <script src="./jquery/detail-product.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>TP2V Shop - Website bán hàng digatal media</title>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./CSS/music-menu.css">
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome.min.css">
+  <script src="./jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+      $("#search_nhactre").click(function(){
+        $(".all").removeClass("show");
+        $(".all").addClass("hide");
+        $(".nhactre").removeClass("hide");
+        $(".nhactre").addClass("show");
+      })      
+    })
+
+  </script>
+</head>
+
+<body>
+  <div class="header row">
+    <div class="header-content">
+      <div class="pull-left" style="width: 800px; padding-bottom: 10px;">
+        <ul>
+          <li>
+            <a href="">
+              <img class="logo" src="./images/logonhom/tp2v.png">
+            </a>        
+          </li>
+          <li style="font-size: 24px; color: green;">TP2V Shop</li>
+          <li class="col-md-4">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+              </span>
+            </div><!-- /input-group -->        
+          </li>
+          <li style="padding-top: 8px;" ><a>Bán hàng</a></li>
+          <li style="padding-top: 8px;" ><a>Trợ giúp</a></li>
+        </ul> 
+      </div>
+      <div class="pull-right" style="padding-top: 8px;">
+        <ul class="ul_user">
+          <li>
+            <img src="./images/avatar.jpg" style="height: 40px; margin-top: -10px;">
+          </li>
+          <li>Chào, Phương</li>
+        </ul>
+      </div>      
+    </div>
+  </div>
+  <div class="content row">
+    <div class="wrap-content row">
+      <div class="row" id="danhmuc">
+        <ul style="border-bottom: 1px solid" >
+          <li><b>Bán chạy nhất</b></li>
+          <li><b>Mới nhất</b></li>
+          <li><b>Tải miễn phí</b></li>
+        </ul>
+        <ul>
+          <li>Thủ thuật</li>
+          <li>eBooks</li>
+          <li>Hình ảnh</li>
+          <li>Tài liệu</li>
+          <li>Âm nhạc
+			       <ul id="music">
+                <li id="children">
+                  <a id="search_nhactre">Nhạc trẻ</a>
+                </li>
+                <li id="classical">
+                  <a href="#">Cổ điển</a>
+                </li>
+                <li id="country">
+                  <a href="#">Quê hương</a>
+                </li>
+                <li id="rock">
+                  <a href="#">Nhạc rock</a>
+                </li>
+                <li id="rb">
+                  <a href="#">R & B</a>
+                </li>
+                <li id="dance">
+                  <a href="#">Dance</a>
+                </li>
+                <li id="karaoke">
+                  <a href="#">Karaoke</a>
+                </li> 
+                <li id="jazz">
+                  <a href="#">Nhạc jazz</a>
+                </li>
+                <li id="usa">
+                  <a href="#">Nhạc Âu- Mỹ</a>
+                </li>  
+                <li id="korea">
+                  <a href="#">Nhạc Hàn Quốc</a>
+                </li>
+                <li id="acoustic">
+                  <a href="#">Nhạc âm hưởng</a>
+                </li>
+                <li id="other">
+                  <a href="#">Khác</a>
+                </li> 
+             </ul>
+		      </li>
+			
+          <li>Phần mềm</li>
+          <li>Video</li>
+          <li>Sách nói</li>
+          <li>Khác</li>
+        </ul>
+      </div>
+      <div class="row" id="floors">
+        
+        <!-- Music -->
+        <div class="floor">
+          <div class="floor-tittle">
+            <a href="" class="pull-left" style="padding-left:7px; font-size: 25px;">
+              <b><i class="fa fa-music"></i> Âm nhạc</b>
+              <span style="font-size: 16px; color: black;">(2000 Items)</span>
+            </a>
+            <a href="" class="pull-right" style="padding-right:7px; padding-top: 10px;">Xem thêm</a>
+          </div>
+          <br>
+          <br>
+          <div class="product all show">
+            <ul>
+
+              <li class="">
+                <a href="">
+                  <img src="./images/product/banoi.jpg">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Em là bà nội...</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Trọng Hiếu</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/dangyeu.jpg">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Ngây thơ</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Miu Lê</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/hit.jpg">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Chân trời</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Miu Lê</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="./detail-product.html">
+                  <img src="./images/avatar-album.jpg">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Tâm sự với người lạ</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Tiên Cookie</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">3.000.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/m2.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Emulartor 3</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Thomas</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">1.000.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/m3.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Deep & future house</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Hary</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">200.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/m4.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Hybrid trap</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Voldmort</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+
+              <li class="">
+                <a href="">
+                  <img src="./images/product/love.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Love of my life</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Christina</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/rb.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Dj Roy Urban</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">ZDK</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/usa.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">American Indian Story </span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Jinda</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/usa.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">American Indian Story </span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Jinda</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/dance.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Me love me </span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Lucian</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/crack.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Crack</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">No</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/das.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Foever alone</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">FA</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/wonder.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Nobody</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Lucian</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/re.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Me love me </span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Lucian</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/bobby.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Bobby</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Lucian</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/blue.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Me love me </span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Lucian</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/na.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Nunanu</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Lucian</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/day.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Mornign</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Lucian</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+
+            </ul>
+          </div>
+          <!-- Search Nhạc trẻ -->
+          <div class="product nhactre hide">
+            <ul>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/banoi.jpg">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Em là bà nội...</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Trọng Hiếu</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/dangyeu.jpg">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Ngây thơ</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Miu Lê</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/hit.jpg">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Chân trời</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Miu Lê</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="./detail-product.html">
+                  <img src="./images/avatar-album.jpg">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Tâm sự với người lạ</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Tiên Cookie</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">3.000.000VND</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer row">
+    <br>
+    <p>@ 2015 TP2V, Inc. All rights reserved.</p>
+    <span>
+      <ul>
+        <li><a href="">Điều khoản</a></li>
+        <li><a href="">Quyền riêng tư</a></li>
+        <li><a href="">Thông báo</a></li>
+      </ul>  
+    </span>
+    
+  </div>
+</body>
+
+
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>TP2V Shop - Website bán hàng digatal media</title>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./CSS/home.css">
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome.min.css">
+  <script src="./jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#dangnhap").click(function(){
+        if ($("#tk").val() == "admin" && $("#mk").val() == "123") {
+          $(".ul_dangky").removeClass("show");
+          $(".ul_dangky").addClass("hide");
+
+          $(".ul_user").removeClass("hide");
+          $(".ul_user").addClass("show");
+          $("#modal_dangnhap").modal('hide');
+        } else {
+          $(".err").text("*Sai tên đăng nhập hoặc mật khẩu");
+        }
+      })
+    })
+  </script>
+
+</head>
+
+<body>
+  <div class="header row">
+    <div class="header-content">
+      <div class="pull-left" style="width: 800px; padding-bottom: 10px;">
+        <ul>
+          <li>
+            <a href="">
+              <img class="logo" src="./images/logonhom/tp2v.png">
+            </a>        
+          </li>
+          <li style="font-size: 24px; color: green;">TP2V Shop</li>
+          <li class="col-md-4">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+              </span>
+            </div><!-- /input-group -->        
+          </li>
+          <li style="padding-top: 8px;" ><a>Bán hàng</a></li>
+          <li style="padding-top: 8px;" ><a>Trợ giúp</a></li>
+        </ul> 
+      </div>
+      <div class="pull-right" style="padding-top: 8px;">
+        <ul class="ul_dangky show">
+          <li><a data-toggle="modal" data-target="#modal_dangnhap">Đăng nhập</a></li>
+          <!-- Modal Đăng nhập -->
+          <div id="modal_dangnhap" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Đăng nhập tài khoản</h4>
+                </div>
+                <div class="modal-body" style="height: 430px;">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8 mid">
+                   
+                    <div class="input-group div-height">
+                      <span style="background: #294B78; color: white; font-weight: bold;" class="input-group-addon" id="basic-addon1"><i style="font-size: 20px;"class="fa fa-facebook"></i></span>
+                      <input style="background: #325c95; color: white; font-weight: bold;" type="button" class="form-control btn-height" value="Đăng nhập bằng Facebook" >
+                    </div> 
+                    <div class="input-group div-height">
+                      <span style="background: #981919; color: white; font-weight: bold;" class="input-group-addon" id="basic-addon1"><i class="fa fa-google"></i></span>
+                      <input style="background: #be1f1f; color: white; font-weight: bold;" type="button" class="form-control btn-height" value="Đăng nhập bằng Google" >
+                    </div> 
+                    <div style="text-align: center; padding-bottom: 20px;">Hoặc đăng nhập bằng tài khoản TP2V</div>
+                    <div class="input-group div-height">
+                      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                      <input type="text" class="form-control btn-height" id="tk" placeholder="Tên truy cập" aria-describedby="basic-addon1">
+                    </div> 
+                    <div class="input-group div-height">
+                      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                      <input type="password" class="form-control btn-height" id="mk" placeholder="Mật khẩu" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="err"></div>
+                    <div class="input-group checkbox div-height">
+                      <label class="">
+                        <input type="checkbox" name="" value="1">
+                        Nhớ đăng nhập
+                      </label>
+                      <a href="./quenmk.html" style="padding-left:131px;">Quên mật khẩu</a>
+                    </div>
+                    <div class="div-height">
+                      <button class="btn btn-primary form-control btn-height" id="dangnhap">Đăng nhập</button>
+                      <p style="text-align: center; padding-top: 20px;">Bạn chưa có tài khoản? <a href="./dangky.html">Đăng ký ngay</a></p>
+                    </div> 
+                  </div>
+                  <div class="col-md-2"></div>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <li><a>Đăng ký</a></li>
+        </ul>
+        <ul class="hide ul_user">
+          <li>
+            <img src="./images/avatar.jpg" style="height: 40px; margin-top: -10px;">
+          </li>
+          <li>Chào, Phương</li>
+        </ul>
+      </div>      
+    </div>
+  </div>
+  <div class="content row">
+    <div class="wrap-content row">
+      <div class="row" id="danhmuc">
+        <ul style="border-bottom: 1px solid" >
+          <li><b>Bán chạy nhất</b></li>
+          <li><b>Mới nhất</b></li>
+          <li><b>Tải miễn phí</b></li>
+        </ul>
+        <ul>
+          <li>Thủ thuật</li>
+          <li>eBooks</li>
+          <li>Hình ảnh</li>
+          <li>Tài liệu</li>
+          <li>Âm nhạc</li>
+          <li>Phần mềm</li>
+          <li>Video</li>
+          <li>Sách nói</li>
+          <li>Khác</li>
+        </ul>
+      </div>
+      <div class="row" id="floors">
+        <!-- Floor 1 - Crafting -->
+        <div class="floor">
+          <div class="floor-tittle">
+            <a href="" class="pull-left" style="padding-left:7px; font-size: 25px;">
+              <b><i class="fa fa-cut"></i> Thủ thuật</b>
+              <span style="font-size: 16px; color: black;">(2000 Items)</span>
+            </a>
+            <a href="" class="pull-right" style="padding-right:7px; padding-top: 10px;">Xem thêm</a>
+          </div>
+          <br>
+          <br>
+          <div class="product">
+            <ul>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/maybay.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Lắp ráp máy bay</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Lee</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">2.000.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/soi.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Sói</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">paperaircr...</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">1.000.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/nguoi.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Thần tiên</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">paperaircr...</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/may.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Khung cảnh đêm</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">paperaircr...</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">1.000.000VND</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <!-- eBook -->
+        <div class="floor">
+          <div class="floor-tittle">
+            <a href="" class="pull-left" style="padding-left:7px; font-size: 25px;">
+              <b><i class="fa fa-book"></i> eBook</b>
+              <span style="font-size: 16px; color: black;">(2000 Items)</span>
+          </a>
+            <a href="" class="pull-right" style="padding-right:7px; padding-top: 10px;">Xem thêm</a>
+          </div>
+          <br>
+          <br>
+          <div class="product">
+            <ul>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/eb1.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">The lost message</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">paperaircr...</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/eb2.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Handbags</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">paperaircr...</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">900.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/eb3.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Machine</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">paperaircr...</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/eb4.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Annial Hoop</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">paperaircr...</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">200.000VND</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <!-- Music -->
+        <div class="floor">
+          <div class="floor-tittle">
+            <a href="" class="pull-left" style="padding-left:7px; font-size: 25px;">
+              <b><i class="fa fa-music"></i> Âm nhạc</b>
+              <span style="font-size: 16px; color: black;">(2000 Items)</span>
+            </a>
+            <a href="./music-menu.html" class="pull-right" style="padding-right:7px; padding-top: 10px;">Xem thêm</a>
+          </div>
+          <br>
+          <br>
+          <div class="product">
+            <ul>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/m1.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Gamnam style</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Psy</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">2.000.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/m2.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Emulartor 3</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Thomas</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">1.000.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/m3.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Deep & future house</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Hary</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">200.000VND</span>
+              </li>
+              <li class="">
+                <a href="">
+                  <img src="./images/product/m4.png">
+                </a>
+                <br>
+                <span style="font-size: 12px;">Hybrid trap</span>
+                <br>
+                <span class="pull-left" style="font-size: 12px; color: #b2b2b2; padding-top: 2px;">Voldmort</span>
+                <span class="pull-right" style="padding-right: 4px; color: blue; padding-bottom: 4px;">500.000VND</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer row">
+    <br>
+    <p>@ 2015 TP2V, Inc. All rights reserved.</p>
+    <span>
+      <ul>
+        <li><a href="">Điều khoản</a></li>
+        <li><a href="">Quyền riêng tư</a></li>
+        <li><a href="">Thông báo</a></li>
+      </ul>  
+    </span>
+    
+  </div>
+</body>
+
+
+</html>
